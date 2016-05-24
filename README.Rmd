@@ -1,0 +1,29 @@
+README
+=========
+
+This file contains information about the steps taken by Run_analysis. 
+=========
+
+Preliminary steps
+------------
+
+1. Download the data from this url: "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+2. Unzip the data into a folder called UCI HAR Dataset
+
+Steps in Run_Analysis
+------------
+
+1. Loads test and training data sets and corresponding source variable names into data tables
+2. Combines test and training data frames using rbind
+3. Loads activity IDs using cbind
+4. Extracts mean and standard deviation variables
+5. Combines the data frames to produce one data frame containing the subjects, measurements and activities
+6. Replaces activity IDs with the activity labels 
+7. Produces a data.table combined data frame as the first expected output
+8. Applies the mean and standard deviation calculations across the groups
+9. Produces "Tidy_data.txt" as the final output
+
+Final dataset
+------------
+
+The final dataset, "Tidy_data.txt" is in this repository. It contains one row for each subject/activity pair. Columns represent the subject, activity and each feature that was a mean or standard deviation variable from the original dataset.
